@@ -1,10 +1,15 @@
+import { Header, Footer } from "./components";
+import { Home, Genres } from "./pages";
+
 function App() {
-  
   return (
     <>
-      <p>MovieScape React Application</p>
+      <Header />
+      <Home />
+      <Genres />
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
