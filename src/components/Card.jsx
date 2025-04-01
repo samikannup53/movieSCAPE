@@ -8,7 +8,7 @@ export const Card = ({ movie }) => {
   return (
     <div
       title={Title}
-      className="w-full sm:w-1/3 lg:w-1/4 xl:w-1/5 border flex flex-col gap-2 relative rounded-md"
+      className="w-full sm:w-1/3 lg:w-1/4 xl:w-1/5 border flex flex-col gap-2 relative rounded-md shadow-custom-light"
     >
       <img
         src={image}
@@ -20,7 +20,7 @@ export const Card = ({ movie }) => {
         <h3 className="text-2xl font-medium heading-overflow ">{Title}</h3>
         <p className="">Year : {Year}</p>
         <p className="mb-3">{Type}</p>
-        <Link to="" className="border px-2  rounded-lg">
+        <Link to={`/streams/${movie.imdbID}/`} className="border px-2  rounded-lg">
           Details
         </Link>
       </div>

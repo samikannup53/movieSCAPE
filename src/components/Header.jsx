@@ -27,13 +27,13 @@ export const Header = () => {
           <div className="relative">
             <button
               onClick={toggleMenu}
-              className="border-[1.75px] rounded-full py-1 w-25 ml-4"
+              className="border-[1.75px] rounded-full py-1 px-3 ml-4"
             >
               Streams
               <i className="fa-solid fa-caret-down text-lg ml-2"></i>
             </button>
             {isMenuOpen && (
-              <div className="bg-[rgb(0,0,0)] absolute p-4 ml-1 rounded-xl flex flex-col">
+              <div className="bg-[rgb(0,0,0)] absolute p-4 ml-2 rounded-xl flex flex-col">
                 <Link
                   to="streams/movies"
                   onClick={toggleMenu}

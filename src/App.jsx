@@ -1,5 +1,5 @@
 import { Header, Footer } from "./components";
-import { Home, MovieList } from "./pages";
+import { Home, MovieList, MovieDetails } from "./pages";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -12,6 +12,7 @@ function App() {
           <Route path="streams/movies" element={<MovieList title="movieSCAPE | Movies" apiPath="movie" stream="movie" />} />
           <Route path="streams/series" element={<MovieList title="movieSCAPE | Series" apiPath="series" stream="series" />} />
           <Route path="streams/episodes" element={<MovieList title="movieSCAPE | Episodes" apiPath="episode" stream="episode" />} />
+          <Route path="streams/:imdbID" element={<MovieDetails/>}  />
         </Routes>
         <Footer/>
       </Router>
