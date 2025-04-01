@@ -1,4 +1,5 @@
 import HeroImage from "../assets/HeroImage.jpg";
+import { Streams } from "../pages";
 
 export const Home = () => {
   return (
@@ -34,6 +35,7 @@ export const Home = () => {
           </div>
         </div>
       </div>
+      <Streams />
     </section>
   );
 };

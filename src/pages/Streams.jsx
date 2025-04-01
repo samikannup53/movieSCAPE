@@ -1,4 +1,4 @@
-export const Genres = () => {
+export const Streams = () => {
   return (
     <section className="bg-[rgb(0,0,0)] text-[rgb(245,197,24)] py-8">
       <div className=" p-6 container mx-auto flex flex-col justify-center items-center">
