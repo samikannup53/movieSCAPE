@@ -86,7 +86,9 @@ export const Header = () => {
           <Link to="/">
             <i className="fa-solid fa-house"></i>
           </Link>
-          <i className="fa-solid fa-heart"></i>
+          <Link to="/favourites">
+            <i className="fa-solid fa-heart"></i>
+          </Link>
           <i className="fa-solid fa-bars"></i>
         </div>
       </nav>

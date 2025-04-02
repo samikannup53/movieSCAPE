@@ -14,7 +14,7 @@ export const MovieList = ({ title, apiPath, stream }) => {
         <h1 className="text-xl my-4 border-b pb-2">{title}</h1>
         <div className="flex flex-wrap justify-center items-start gap-8">
           {movies.map((movie) => {
-            return <Card key={movie.imdbID} movie={movie} />;
+            return <Card key={movie.imdbID} movie={movie} page="movielist" />;
           })}
         </div>
       </div>

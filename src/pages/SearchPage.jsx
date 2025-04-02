@@ -49,7 +49,7 @@ export const SearchPage = () => {
         )}{" "}
         <div className="flex flex-wrap justify-center items-start gap-8">
           {search.map((movie) => (
-            <Card key={movie.imdbID} movie={movie} />
+            <Card key={movie.imdbID} movie={movie} page="search" />
           ))}
         </div>
       </div>
