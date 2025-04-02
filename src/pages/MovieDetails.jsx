@@ -7,6 +7,10 @@ export const MovieDetails = () => {
   const [movie, setMovie] = useState([]);
   const key = import.meta.env.VITE_API_KEY;
   const url = `https://www.omdbapi.com/?apikey=${key}&i=${params.imdbID}`;
+
+  const { Poster, Title, Year, Type } = movie;
+  const image = Poster && Poster !== 'N/A' && Poster !== '' ? Poster : BackupImage;
+
   useEffect(() => {
     async function fetchMovies() {
       fetch(url)
@@ -30,7 +34,7 @@ export const MovieDetails = () => {
           <div className="flex flex-col lg:flex-row gap-3 border rounded-md">
             <div>
               <img
-                src={movie.Poster}
+                src={image}
                 className="rounded-t-md lg:rounded-l-md lg:rounded-t-none h-full sm:h-[20rem] lg:h-full w-full object-cover"
                 alt="Movie Poster Image"
               />
