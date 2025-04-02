@@ -21,12 +21,13 @@ export const MovieDetails = () => {
   });
 
   return (
-    <section className="z-40 bg-[rgb(0,0,0)] text-[rgb(245,197,24)]">
+    <section className="min-h-[72vh] z-40  text-[rgb(245,197,24)]">
       <div className="container mx-auto p-10">
-        <div className="flex justify-center items-center">
-          <div
-            className="flex flex-col lg:flex-row gap-3 border rounded-md"
-          >
+        <h1 className="border-b mb-6 pb-2 text-2xl font-medium">
+          {movie.Title}
+        </h1>
+        <div className="flex  justify-center items-center">
+          <div className="flex flex-col lg:flex-row gap-3 border rounded-md">
             <div>
               <img
                 src={movie.Poster}
@@ -37,6 +38,7 @@ export const MovieDetails = () => {
             <div className="p-4 flex flex-col items-start justify-start gap-1">
               <h3 className="text-2xl font-medium">{movie.Title}</h3>
               <p className="max-w-[720px]">{movie.Plot}</p>
+              <p>Genres : &nbsp;{movie.Genre}</p>
               <p>Actors : &nbsp;{movie.Actors}</p>
               <p>Director : &nbsp;{movie.Director}</p>
               <p>Writer : &nbsp;{movie.Writer}</p>
