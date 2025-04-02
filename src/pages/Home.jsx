@@ -1,7 +1,12 @@
 import HeroImage from "../assets/HeroImage.jpg";
 import { Streams } from "../pages";
+import { useEffect } from "react";
 
-export const Home = () => {
+export const Home = ({ title }) => {
+  useEffect(() => {
+    document.title = `${title}`;
+  });
+
   return (
     <section
       className="min-h-[90vh] bg-cover bg-center bg-no-repeat bg-fixed"
@@ -22,7 +27,7 @@ export const Home = () => {
             <h3 className="text-[rgb(245,197,24)] border rounded-full px-8 py-2 text-center text-4xl lg:text-5xl font-semibold">
               Movie Tailored to Your Mood
             </h3>
-            <h4 className="text-white text-xl">
+            <h4 className="text-white text-xl text-center">
               Movies &nbsp; &nbsp;| &nbsp; &nbsp; Found &nbsp; &nbsp; | &nbsp;
               &nbsp; Fast
             </h4>

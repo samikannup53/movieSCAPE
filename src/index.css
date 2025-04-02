@@ -4,6 +4,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  background-color: rgb(0, 0, 0);
+}
+
 .heading-overflow {
   display: -webkit-box;
   -webkit-line-clamp: 1;
@@ -11,4 +15,3 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-

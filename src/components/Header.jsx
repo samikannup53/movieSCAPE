@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,24 +8,46 @@ export const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const [queryTerm, setQueryTerm] = useState("");
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (queryTerm.trim()) {
+      navigate(`/search/${queryTerm}`);
+      setQueryTerm("");
+    }
+  };
+
   return (
     <section className="z-40 bg-[rgb(0,0,0)] text-[rgb(245,197,24)] sticky top-0">
       <nav className="container mx-auto flex justify-between items-cneter p-6    ">
-        <div className="flex items-center justify-center gap-3 text-[1.75rem] font-semibold ">
+        {/* Logo */}
+        <div className="flex items-center justify-center gap-3 text-[1.5rem] sm:text-[1.75rem] font-semibold ">
           <i className="fa-solid fa-film"></i>
           <h1 className="">movieSCAPE</h1>
         </div>
-        <div className="flex items-center">
-          <div className="border-[1.75px] rounded-full px-4 py-1 text-[18px] ">
+        <div className="lg:flex items-center hidden">
+          {/* Search Option */}
+          <form
+            onSubmit={handleSubmit}
+            className="flex items-center border-[1.75px] rounded-full px-4 py-1 text-[18px]"
+          >
             <input
-              type="text"
+              type="search"
               placeholder="Search Movies ..."
               className="outline-none"
+              value={queryTerm}
+              onChange={(e) => setQueryTerm(e.target.value)}
             />
-            <i className="fa-solid fa-magnifying-glass"></i>
-          </div>
+            <button type="submit">
+              <i className="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+          {/* Streams Option */}
           <div className="relative">
             <button
+              type="submit"
               onClick={toggleMenu}
               className="border-[1.75px] rounded-full py-1 px-3 ml-4"
             >
@@ -59,7 +81,8 @@ export const Header = () => {
             )}
           </div>
         </div>
-        <div className="flex items-center gap-4 text-2xl">
+        {/* Home, Favourites, Menu Option */}
+        <div className="flex items-center gap-3 sm:gap-4 text-[1.25rem] sm:text-2xl">
           <Link to="/">
             <i className="fa-solid fa-house"></i>
           </Link>
