@@ -13,18 +13,18 @@ export const Home = ({ title }) => {
       style={{ backgroundImage: `url(${HeroImage})` }}
     >
       <div className=" min-h-[90vh] bg-black/30 flex flex-col items-center justify-center">
-        <div className="container mx-auto px-10 lg:px-30 ">
-          <div className="my-10 px-8 py-10 flex flex-col items-center justify-center gap-6 xl:gap-8 bg-black/75 rounded-[30px]">
-            <h3 className="text-white text-3xl font-medium text-center">
+        <div className="container mx-auto px-4 sm:px-10 lg:px-30 ">
+          <div className="my-10 px-2 sm:px-8 py-10 flex flex-col items-center justify-center gap-6 xl:gap-8 bg-black/75 rounded-[30px]">
+            <h3 className="text-white text-xl sm:text-3xl font-medium text-center">
               Welcome to &nbsp;
               <span className="text-[rgb(245,197,24)]">
                 <i class="fa-solid fa-film"></i> movieSCAPE
               </span>
             </h3>
-            <h1 className="text-[#00FFAB] text-4xl font-bold text-center">
+            <h1 className="text-[#00FFAB] text-2xl sm:text-4xl font-bold text-center">
               Your Ultimate Movie Destination
             </h1>
-            <h3 className="text-[rgb(245,197,24)] border rounded-full px-8 py-2 text-center text-4xl lg:text-5xl font-semibold">
+            <h3 className="text-[rgb(245,197,24)] border rounded-full px-8 py-2 text-center text-lg sm:text-4xl lg:text-5xl font-semibold">
               Movie Tailored to Your Mood
             </h3>
             <h4 className="text-white text-xl text-center">

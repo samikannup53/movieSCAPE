@@ -103,10 +103,10 @@ export const Header = () => {
           </span>
         </div>
         <div
-          className={`h-screen w-[80%] sm:w-[250px] fixed right-0 top-20 bg-[rgb(0,0,0)] opacity-90 transition-transform duration-500 ease-in-out transform 
+          className={`h-screen w-[75%] sm:w-[250px] fixed right-0 top-20 bg-[rgb(0,0,0)] transition-transform duration-500 ease-in-out transform 
             ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}
         >
-          <div className="flex flex-col items-end text-[rgb(245,197,24)] pb-4 px-8 text-lg mr-4">
+          <div className="flex flex-col gap-3 items-end text-[rgb(245,197,24)] pb-4 px-8 text-xl sm:text-lg sm:mr-4">
             <Link
               to="/"
               onClick={toggleMenu}
