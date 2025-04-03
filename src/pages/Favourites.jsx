@@ -8,8 +8,8 @@ export const Favourites = () => {
   return (
     <section className="z-40 bg-[rgb(0,0,0)] text-[rgb(245,197,24)]">
       <div className="container mx-auto p-6">
-        <h1 className="text-2xl my-4 border-b border-[rgb(245,197,24)] pb-2 text-white flex flex-items-center">
-          <span className="text-[rgb(245,197,24)]">| &nbsp;</span>Favourites
+        <h1 className="text-2xl my-4 border-b font-medium border-[rgb(245,197,24)] pb-2 text-white flex flex-items-center">
+          <span className="text-[rgb(245,197,24)] font-bold">| &nbsp;</span>Favourites
           <span className="text-3xl">&nbsp; &gt;</span>
         </h1>
         <div className="">

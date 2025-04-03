@@ -15,3 +15,18 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.custom-underline {
+  position: relative;
+}
+
+.custom-underline::after {
+  content: '';
+  position: absolute;
+  left:22px;
+  bottom: -10px;
+  width: 70px;
+  height: 3px;
+  background-color: #F5C518;
+  border-radius: 2px;
+}

@@ -1,0 +1,1 @@
+Red Color : text-[rgb(229,9,20)]

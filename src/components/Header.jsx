@@ -27,11 +27,11 @@ export const Header = () => {
           <i className="fa-solid fa-film"></i>
           <h1 className="">movieSCAPE</h1>
         </div>
-        <div className="lg:flex items-center hidden">
+        <div className="flex items-center">
           {/* Search Option */}
           <form
             onSubmit={handleSubmit}
-            className="flex items-center border-[1.75px] rounded-full px-4 py-1 text-[18px]"
+            className="hidden sm:flex items-center border-[1.75px] rounded-full px-4 py-1 text-[18px]"
           >
             <input
               type="search"
@@ -44,8 +44,9 @@ export const Header = () => {
               <i className="fa-solid fa-magnifying-glass"></i>
             </button>
           </form>
+          
           {/* Streams Option */}
-          <div className="relative">
+          <div className="relative hidden lg:block">
             <button
               type="submit"
               onClick={toggleMenu}
@@ -83,12 +84,15 @@ export const Header = () => {
         </div>
         {/* Home, Favourites, Menu Option */}
         <div className="flex items-center gap-3 sm:gap-4 text-[1.25rem] sm:text-2xl">
-          <Link to="/">
+          <Link to="/" className="hidden sm:block">
             <i className="fa-solid fa-house"></i>
           </Link>
-          <Link to="/favourites">
+          <Link to="/favourites" className="hidden sm:block">
             <i className="fa-solid fa-heart"></i>
           </Link>
+          <span className="sm:hidden">
+            <i className="fa-solid fa-magnifying-glass "></i>
+          </span>
           <i className="fa-solid fa-bars"></i>
         </div>
       </nav>
