@@ -9,12 +9,12 @@ export const Home = ({ title }) => {
 
   return (
     <section
-      className="min-h-[90vh] bg-cover bg-center bg-no-repeat bg-fixed"
+      className="sm:min-h-[90vh] bg-cover bg-center bg-no-repeat bg-fixed"
       style={{ backgroundImage: `url(${HeroImage})` }}
     >
-      <div className=" min-h-[90vh] bg-black/30 flex flex-col items-center justify-center">
+      <div className="sm:min-h-[90vh] bg-black/30 flex flex-col items-center justify-center">
         <div className="container mx-auto px-4 sm:px-10 lg:px-30 ">
-          <div className="my-10 px-2 sm:px-8 py-10 flex flex-col items-center justify-center gap-6 xl:gap-8 bg-black/75 rounded-[30px]">
+          <div className="my-10 px-2 sm:px-8 py-15 sm:py-10 flex flex-col items-center justify-center gap-6 xl:gap-8 bg-black/75 rounded-[30px]">
             <h3 className="text-white text-xl sm:text-3xl font-medium text-center">
               Welcome to &nbsp;
               <span className="text-[rgb(245,197,24)]">
