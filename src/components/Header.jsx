@@ -152,7 +152,7 @@ export const Header = () => {
       >
         <form
           onSubmit={handleSubmit}
-          className="px-4 py-1 rounded-full border-[1.75px]"
+          className="px-2 py-1 rounded-full border-[1.75px]"
         >
           <input
             type="search"
