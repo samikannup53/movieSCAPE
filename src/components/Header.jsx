@@ -26,10 +26,9 @@ export const Header = () => {
   return (
     // Header Section
     <section className="z-50 bg-[rgb(0,0,0)] text-[rgb(245,197,24)] sticky top-0">
-      {/* Section Container */}
-      {/* <div className="relative container mx-auto bg-[rgb(0,0,0)]"> */}
+      {/* Section Container */}      
       {/* Nav Bar */}
-      <nav className="sm:z-30 flex justify-between items-center p-6">
+      <nav className="container mx-auto sm:z-30 flex justify-between items-center p-6">
         {/* Logo */}
         <div className="flex items-center justify-center gap-3 text-[1.5rem] sm:text-[1.75rem] font-semibold">
           <i className="fa-solid fa-film"></i>
@@ -141,8 +140,7 @@ export const Header = () => {
             About Us
           </Link>
         </div>
-      </div>
-      {/* </div> */}
+      </div>      
     </section>
   );
 };
