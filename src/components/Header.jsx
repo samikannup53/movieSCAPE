@@ -146,7 +146,7 @@ export const Header = () => {
         </div>
       </div>
       <div
-        className={`h-20 flex items-center justify-center gap-4 sm:hidden  w-full absolute  right-0 top-0 bg-[rgb(0,0,0)] duration-1000 ${
+        className={`h-20 px-4 flex items-center justify-center gap-2 sm:hidden  w-full absolute  right-0 top-0 bg-[rgb(0,0,0)] duration-1000 ${
           isSearchOpen ? "translate-x-0" : "translate-x-[100%]"
         }`}
       >
