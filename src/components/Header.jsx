@@ -157,7 +157,7 @@ export const Header = () => {
           <input
             type="search"
             placeholder="Search Movies ..."
-            className="outline-none w-40"
+            className="outline-none w-50"
             value={queryTerm}
             onChange={(e) => setQueryTerm(e.target.value)}
           />
