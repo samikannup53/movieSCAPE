@@ -27,8 +27,10 @@ export const MovieDetails = () => {
   return (
     <section className="min-h-[72vh] z-40  text-[rgb(245,197,24)]">
       <div className="container mx-auto p-10">
-        <h1 className="border-b mb-6 pb-2 text-2xl font-medium">
-          {movie.Title}
+         <h1 className="bg-[rgb(0,0,0)] sticky capitalize z-40 top-[84px] text-2xl my-4 border-b font-medium border-[rgb(245,197,24)] pb-2 text-white flex flex-items-center">
+          <span className="text-[rgb(245,197,24)] font-bold">| &nbsp;</span>
+          {Title}
+          <span className="text-3xl">&nbsp; &gt;</span>
         </h1>
         <div className="flex  justify-center items-center">
           <div className="flex flex-col lg:flex-row gap-3 border rounded-md">
@@ -47,7 +49,7 @@ export const MovieDetails = () => {
               <p>Director : &nbsp;{movie.Director}</p>
               <p>Writer : &nbsp;{movie.Writer}</p>
               <p>Awards : &nbsp;{movie.Awards}</p>
-              <p>Release Year : &nbsp;{movie.Year}</p>
+              <p>Release Year : &nbsp;{Year}</p>
               <p className="mb-4">
                 Ratings
                 {movie.Ratings ? (

@@ -40,13 +40,15 @@ export const MovieList = ({ title, apiPath, stream }) => {
   }, [url, title, stream]);
 
   return (
-    <section className="z-40 bg-[rgb(0,0,0)] text-[rgb(245,197,24)]">
+    <section className="min-h-[70vh] z-40 bg-[rgb(0,0,0)] text-[rgb(245,197,24)]">
       <div className="container mx-auto p-6">
-        <h1 className="text-2xl my-4 border-b font-medium border-[rgb(245,197,24)] pb-2 text-white flex flex-items-center">
+        <h1 className="bg-[rgb(0,0,0)] sticky z-40 top-[84px] text-2xl my-4 border-b font-medium border-[rgb(245,197,24)] pb-2 text-white flex items-center">
           <span className="text-[rgb(245,197,24)] font-bold">| &nbsp;</span>
-          {
-            stream === "movie" ? "Movies" :
-            stream === "series" ? "Series" : "Episodes"}
+          {stream === "movie"
+            ? "Movies"
+            : stream === "series"
+            ? "Series"
+            : "Episodes"}
           <span className="text-3xl">&nbsp; &gt;</span>
         </h1>
         <div className="flex justify-center items-center">
@@ -60,7 +62,7 @@ export const MovieList = ({ title, apiPath, stream }) => {
             />
           )}
         </div>
-        {error && <p className="text-red-500">{error}</p>}
+        {error && <p className="text-red-500 capitalize text-xl font-medium">{error}</p>}
         <div className="flex flex-wrap justify-center items-start gap-8">
           {movies.map((movie) => {
             return <Card key={movie.imdbID} movie={movie} page="movielist" />;

@@ -24,7 +24,7 @@ export const Home = ({ title }) => {
             <h1 className="text-[#00FFAB] text-2xl sm:text-4xl font-bold text-center">
               Your Ultimate Movie Destination
             </h1>
-            <h3 className="text-[rgb(245,197,24)] border rounded-full px-8 py-2 text-center text-lg sm:text-4xl  font-semibold">
+            <h3 className="text-[rgb(245,197,24)] border rounded-full px-8 py-2 text-center text-lg sm:text-4xl lg:text-5xl font-semibold">
               Movie Tailored to Your Mood
             </h3>
             <h4 className="text-white text-xl text-center">
