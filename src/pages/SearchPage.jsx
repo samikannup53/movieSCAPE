@@ -65,12 +65,12 @@ export const SearchPage = (stream) => {
     <section className="min-h-[60vh] p-6 bg-black text-yellow-500">
       <div className="container mx-auto px-6">
         <div className="bg-[rgb(0,0,0)] sticky z-40 top-[84px] flex justify-between items-center border-b border-[rgb(245,197,24)] mb-4 ">
-          <h1 className=" text-2xl mb-2  font-medium   text-white flex items-center">
+          <h1 className=" text-xl sm:text-2xl mb-2  font-medium   text-white flex items-center">
             <span className="text-[rgb(245,197,24)] font-bold">| &nbsp;</span>
             Search Results
-            <span className="text-3xl">&nbsp; &gt;</span>
+            <span className="text-3xl mt-[5px]"> &gt;</span>
           </h1>
-          <div className="text-xl font-medium flex">
+          <div className="text-xl font-medium mb-2 flex">
             <span className="text-white hidden sm:block">
               Total Pages -{" "}
               <span className="text-[rgb(245,197,24)]">{totalPages}</span>

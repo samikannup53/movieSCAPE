@@ -4,7 +4,8 @@ import { Link, useNavigate } from "react-router-dom";
 export const Header = () => {
   const [isStreamOpen, setIsStreamOpen] = useState(false); // To Store Stream Menu Open/Close Status
   const [isMenuOpen, setIsMenuOpen] = useState(false); // To Store Side Menu Open/Close Status
-  const [queryTerm, setQueryTerm] = useState(""); // To Store User Serch Input
+  const [queryTerm, setQueryTerm] = useState(""); // To Store User Search Input
+  const [isSearchOpen, setIsSearchOpen] = useState(false); // To Store Search Menu Open/Close Status
 
   const navigate = useNavigate();
 
@@ -13,6 +14,9 @@ export const Header = () => {
 
   // Toggle Side Menu
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  // Toggle Side Menu
+  const toggleSearchBar = () => setIsSearchOpen(!isSearchOpen);
 
   // Handle Search Form Submit
   const handleSubmit = (e) => {
@@ -26,7 +30,7 @@ export const Header = () => {
   return (
     // Header Section
     <section className="z-50 bg-[rgb(0,0,0)] text-[rgb(245,197,24)] sticky top-0">
-      {/* Section Container */}      
+      {/* Section Container */}
       {/* Nav Bar */}
       <nav className="container mx-auto sm:z-30 flex justify-between items-center p-6">
         {/* Logo */}
@@ -98,7 +102,7 @@ export const Header = () => {
           <Link to="/favourites" className="hidden sm:block">
             <i className="fa-solid fa-heart"></i>
           </Link>
-          <span className="sm:hidden">
+          <span onClick={toggleSearchBar} className="sm:hidden">
             <i className="fa-solid fa-magnifying-glass"></i>
           </span>
           <span onClick={toggleMenu} className="lg:hidden">
@@ -140,7 +144,34 @@ export const Header = () => {
             About Us
           </Link>
         </div>
-      </div>      
+      </div>
+      <div
+        className={`h-20 flex items-center justify-center gap-4 sm:hidden  w-full absolute  right-0 top-0 bg-[rgb(0,0,0)] duration-1000 ${
+          isSearchOpen ? "translate-x-0" : "translate-x-[100%]"
+        }`}
+      >
+        <form
+          onSubmit={handleSubmit}
+          className="px-4 py-1 rounded-full border-[1.75px]"
+        >
+          <input
+            type="search"
+            placeholder="Search Movies ..."
+            className="outline-none"
+            value={queryTerm}
+            onChange={(e) => setQueryTerm(e.target.value)}
+          />
+          <button type="submit">
+            <i className="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+        <button
+          onClick={toggleSearchBar}
+          className="px-2 text-xl  border rounded-full"
+        >
+          <i className="fa-solid fa-xmark"></i>
+        </button>
+      </div>
     </section>
   );
 };

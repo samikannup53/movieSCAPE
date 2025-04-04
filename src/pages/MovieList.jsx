@@ -76,7 +76,7 @@ export const MovieList = ({ title, apiPath, stream }) => {
               : "Episodes"}
             <span className="text-3xl">&nbsp; &gt;</span>
           </h1>
-          <div className="text-xl font-medium flex">
+          <div className="text-xl font-medium flex mb-2">
             <span className="text-white hidden sm:block">
               Total Pages -{" "}
               <span className="text-[rgb(245,197,24)]">{totalPages}</span>
