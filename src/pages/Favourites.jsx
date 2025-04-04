@@ -7,8 +7,8 @@ export const Favourites = () => {
 
   return (
     <section className="z-40 bg-[rgb(0,0,0)] text-[rgb(245,197,24)] min-h-[70vh]">
-      <div className="container mx-auto p-6">
-        <h1 className="text-2xl my-4 sticky top-[84px] border-b font-medium border-[rgb(245,197,24)] pb-2 text-white flex flex-items-center">
+      <div className="container mx-auto px-6">
+        <h1 className="bg-[rgb(0,0,0)] text-2xl z-40 mb-4 sticky top-[84px] border-b font-medium border-[rgb(245,197,24)] pb-2 text-white flex flex-items-center">
           <span className="text-[rgb(245,197,24)] font-bold">| &nbsp;</span>
           Favourites
           <span className="text-3xl">&nbsp; &gt;</span>

@@ -110,7 +110,7 @@ export const Header = () => {
       {/* Side Menu */}
       <div
         className={`lg:hidden min-h-[100vh]  w-[75%] sm:w-[250px]  absolute right-0 top-0 bg-[rgb(0,0,0)] duration-1000 ${
-          isMenuOpen ? "translate-x-[100%]" : "translate-x-0"
+          isMenuOpen ? "translate-x-0" : "translate-x-[100%]"
         }`}
       >
         <div className="flex flex-col gap-3 items-end text-[rgb(245,197,24)] px-10 text-lg mt-20">
