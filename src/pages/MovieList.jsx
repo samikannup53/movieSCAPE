@@ -31,6 +31,8 @@ export const MovieList = ({ title, apiPath, stream }) => {
           setTotalResults(parseInt(jsonData.totalResults));
         } else {
           setError(`No ${stream} Found`);
+          setCurrentPage(1);
+          setTotalResults(0);
         }
       })
       .catch((error) => {
@@ -75,16 +77,23 @@ export const MovieList = ({ title, apiPath, stream }) => {
             <span className="text-3xl">&nbsp; &gt;</span>
           </h1>
           <div className="text-xl font-medium flex">
-            <span className="text-white hidden sm:block">Total Pages - <span className="text-[rgb(245,197,24)]">{totalPages}</span></span>
+            <span className="text-white hidden sm:block">
+              Total Pages -{" "}
+              <span className="text-[rgb(245,197,24)]">{totalPages}</span>
+            </span>
             <span className="text-white ml-2 mr-2 hidden sm:block">|</span>
-            <button onClick={handlePrevious} disabled={currentPage === 1}><i class="fa-solid fa-circle-chevron-left"></i></button>
+            <button onClick={handlePrevious} disabled={currentPage === 1}>
+              <i class="fa-solid fa-circle-chevron-left"></i>
+            </button>
             <span className="text-white ml-2 mr-2 hidden sm:block">
               {currentPage}
             </span>
             <span className="text-white ml-2 mr-2 sm:hidden">
               {currentPage}/{totalPages}
             </span>
-            <button onClick={handleNext} disabled={currentPage === totalPages}><i class="fa-solid fa-circle-chevron-right"></i></button>
+            <button onClick={handleNext} disabled={currentPage === totalPages}>
+              <i class="fa-solid fa-circle-chevron-right"></i>
+            </button>
           </div>
         </div>
         <div className="flex justify-center items-center">
