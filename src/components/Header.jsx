@@ -29,10 +29,10 @@ export const Header = () => {
 
   return (
     // Header Section
-    <section className="z-50 bg-[rgb(0,0,0)] text-[rgb(245,197,24)] sticky top-0">
+    <section className="z-50 bg-[rgb(0,0,0)] text-[rgb(245,197,24)] sticky top-0 overflow-x-hidden">
       {/* Section Container */}
       {/* Nav Bar */}
-      <nav className="container mx-auto sm:z-30 flex justify-between items-center p-6">
+      <nav className="container mx-auto flex justify-between items-center p-6 ">
         {/* Logo */}
         <div className="flex items-center justify-center gap-3 text-[1.5rem] sm:text-[1.75rem] font-semibold">
           <i className="fa-solid fa-film"></i>
@@ -113,8 +113,8 @@ export const Header = () => {
 
       {/* Side Menu */}
       <div
-        className={`lg:hidden min-h-[100vh]  w-[75%] sm:w-[250px]  absolute right-0 top-0 bg-[rgb(0,0,0)] duration-1000 ${
-          isMenuOpen ? "translate-x-0" : "translate-x-[100%]"
+        className={`z-50 lg:hidden min-h-[100vh]  w-[75%] sm:w-[250px]  fixed right-0 top-0 bg-[rgb(0,0,0)] duration-1000 ${
+          isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <div className="flex flex-col gap-3 items-end text-[rgb(245,197,24)] px-10 text-lg mt-20">
@@ -146,8 +146,8 @@ export const Header = () => {
         </div>
       </div>
       <div
-        className={`h-20 px-2 flex items-center justify-center gap-2 sm:hidden  w-full absolute  right-0 top-0 bg-[rgb(0,0,0)] duration-1000 ${
-          isSearchOpen ? "translate-x-0" : "translate-x-[100%]"
+        className={`h-20 px-2 flex items-center justify-center gap-4 sm:hidden  w-full fixed   right-0 top-0 bg-[rgb(0,0,0)] duration-1000 ${
+          isSearchOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <form
@@ -157,7 +157,7 @@ export const Header = () => {
           <input
             type="search"
             placeholder="Search Movies ..."
-            className="outline-none w-50"
+            className="outline-none w-55"
             value={queryTerm}
             onChange={(e) => setQueryTerm(e.target.value)}
           />
