@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { ScrollTop } from "../utilities/ScrollTop";
 
 export const StreamCard = ({ image, title, description }) => {
   const navigate = useNavigate();
@@ -15,11 +16,13 @@ export const StreamCard = ({ image, title, description }) => {
 
   return (
     <div
-      onClick={handleExploreClick}
+      onClick={() => {
+        handleExploreClick(), ScrollTop();
+      }}
       className="p-5 border rounded-[10px] flex flex-col justify-between gap-6 items-start cursor-pointer"
     >
       <div>
-        <img src={image} alt={`${title} Image Icon`} className="w-30" />
+        <img src={image} alt={`${title} Image Icon`} className="w-25" />
         <h1 className="text-2xl my-4  font-medium   text-white flex flex-items-center">
           <span className="text-[rgb(245,197,24)] font-bold">| &nbsp;</span>
           {title}

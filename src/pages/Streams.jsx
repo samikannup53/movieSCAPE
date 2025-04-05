@@ -6,7 +6,7 @@ import { StreamCard } from "../components/StreamCard";
 export const Streams = () => {
   const streams = useStreams(); 
   return (
-    <section className="bg-[rgb(0,0,0)] text-[rgb(245,197,24)] py-12 sm:mb-8">
+    <section id="streams" className="bg-[rgb(0,0,0)] text-[rgb(245,197,24)] py-12 sm:mb-8">
       <div className="p-6 container mx-auto flex flex-col justify-center items-center">
         <h2 className="custom-underline text-center text-2xl uppercase font-semibold">
           Streams

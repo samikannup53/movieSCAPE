@@ -1,6 +1,7 @@
 import HeroImage from "../assets/HeroImage.jpg";
 import { Streams } from "../pages";
 import { useEffect } from "react";
+import {StreamsScroll} from "../utilities/StreamScroll"
 
 export const Home = ({ title }) => {
   useEffect(() => {
@@ -34,7 +35,7 @@ export const Home = ({ title }) => {
             <span className="text-[rgb(245,197,24)] text-5xl xl;mt-10 animate-bounce">
               <i class="fa-solid fa-arrow-down"></i>
             </span>
-            <button className="cursor-pointer text-2xl bg-[rgb(245,197,24)] text-[rgb(0,0,0)] font-semibold border rounded-full px-6 py-2">
+            <button onClick={StreamsScroll} className="cursor-pointer text-2xl bg-[rgb(245,197,24)] text-[rgb(0,0,0)] font-semibold border rounded-full px-6 py-2">
               Explore Now
             </button>
           </div>

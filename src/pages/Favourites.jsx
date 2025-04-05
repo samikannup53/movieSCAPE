@@ -6,7 +6,7 @@ export const Favourites = () => {
   const { favourites } = useFavourites();
 
   return (
-    <section className="z-40 bg-[rgb(0,0,0)] text-[rgb(245,197,24)] min-h-[70vh]">
+    <section className=" z-40 bg-[rgb(0,0,0)] text-[rgb(245,197,24)] min-h-[60vh]">
       <div className="container mx-auto px-6">
         <h1 className="bg-[rgb(0,0,0)] text-2xl z-40 mb-4 sticky top-[84px] border-b font-medium border-[rgb(245,197,24)] pb-2 text-white flex flex-items-center">
           <span className="text-[rgb(245,197,24)] font-bold">| &nbsp;</span>

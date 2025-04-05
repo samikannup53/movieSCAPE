@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Card } from "../components";
 import { OrbitProgress } from "react-loading-indicators";
+import { ScrollTop } from "../utilities/ScrollTop";
 
 export const SearchPage = (stream) => {
   const { queryTerm } = useParams();
@@ -76,7 +77,12 @@ export const SearchPage = (stream) => {
               <span className="text-[rgb(245,197,24)]">{totalPages}</span>
             </span>
             <span className="text-white ml-2 mr-2 hidden sm:block">|</span>
-            <button onClick={handlePrevious} disabled={currentPage === 1}>
+            <button
+              onClick={() => {
+                handlePrevious(), ScrollTop();
+              }}
+              disabled={currentPage === 1}
+            >
               <i class="fa-solid fa-circle-chevron-left"></i>
             </button>
             <span className="text-white ml-2 mr-2 hidden sm:block">
@@ -85,7 +91,12 @@ export const SearchPage = (stream) => {
             <span className="text-white ml-2 mr-2 sm:hidden">
               {currentPage}/{totalPages}
             </span>
-            <button onClick={handleNext} disabled={currentPage === totalPages}>
+            <button
+              onClick={() => {
+                handleNext(), ScrollTop();
+              }}
+              disabled={currentPage === totalPages}
+            >
               <i class="fa-solid fa-circle-chevron-right"></i>
             </button>
           </div>

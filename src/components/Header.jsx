@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { ScrollTop } from "../utilities/ScrollTop";
 
 export const Header = () => {
   const [isStreamOpen, setIsStreamOpen] = useState(false); // To Store Stream Menu Open/Close Status
@@ -23,13 +24,14 @@ export const Header = () => {
     e.preventDefault();
     if (queryTerm.trim()) {
       navigate(`/search/${queryTerm}`);
+      ScrollTop();
       setQueryTerm("");
     }
   };
 
   return (
     // Header Section
-    <section className="z-50 bg-[rgb(0,0,0)] text-[rgb(245,197,24)] sticky top-0 overflow-x-hidden">
+    <section className="z-50 bg-[rgb(0,0,0)] text-[rgb(245,197,24)] sticky top-0 overflow-x-hidden lg:overflow-x-visible">
       {/* Section Container */}
       {/* Nav Bar */}
       <nav className="container mx-auto flex justify-between items-center p-6 ">
@@ -43,6 +45,7 @@ export const Header = () => {
           {/* Search Option */}
           <form
             onSubmit={handleSubmit}
+            // onClick={ScrollTop}
             className="hidden sm:flex items-center border-[1.75px] rounded-full px-4 py-1 lg:text-[18px]"
           >
             <input
@@ -70,21 +73,27 @@ export const Header = () => {
               <div className="bg-[rgb(0,0,0)] absolute p-4 ml-2 rounded-xl flex flex-col">
                 <Link
                   to="streams/movies"
-                  onClick={toggleStream}
+                  onClick={() => {
+                    toggleStream(), ScrollTop();
+                  }}
                   className="px-3 py-1 font-medium rounded-full text-center hover:text-black hover:bg-yellow-300"
                 >
                   Movies
                 </Link>
                 <Link
                   to="streams/series"
-                  onClick={toggleStream}
+                  onClick={() => {
+                    toggleStream(), ScrollTop();
+                  }}
                   className="px-3 py-1 font-medium rounded-full text-center hover:text-black hover:bg-yellow-300"
                 >
                   Series
                 </Link>
                 <Link
                   to="streams/episodes"
-                  onClick={toggleStream}
+                  onClick={() => {
+                    toggleStream(), ScrollTop();
+                  }}
                   className="px-3 py-1 font-medium rounded-full text-center hover:text-black hover:bg-yellow-300"
                 >
                   Episodes
@@ -96,10 +105,14 @@ export const Header = () => {
 
         {/* Home, Favourites, Menu Option */}
         <div className="flex items-center gap-3 sm:gap-4 text-[1.25rem] sm:text-2xl">
-          <Link to="/" className="hidden sm:block">
+          <Link onClick={ScrollTop} to="/" className="hidden sm:block">
             <i className="fa-solid fa-house"></i>
           </Link>
-          <Link to="/favourites" className="hidden sm:block">
+          <Link
+            onClick={ScrollTop}
+            to="/favourites"
+            className="hidden sm:block"
+          >
             <i className="fa-solid fa-heart"></i>
           </Link>
           <span onClick={toggleSearchBar} className="sm:hidden">
@@ -125,22 +138,52 @@ export const Header = () => {
             <i className="fa-solid fa-xmark"></i>
           </button>
 
-          <Link to="/" onClick={toggleMenu}>
+          <Link
+            to="/"
+            onClick={() => {
+              toggleMenu(), ScrollTop();
+            }}
+          >
             Home
           </Link>
-          <Link to="streams/movies" onClick={toggleMenu}>
+          <Link
+            to="streams/movies"
+            onClick={() => {
+              toggleMenu(), ScrollTop();
+            }}
+          >
             Movies
           </Link>
-          <Link to="streams/series" onClick={toggleMenu}>
+          <Link
+            to="streams/series"
+            onClick={() => {
+              toggleMenu(), ScrollTop();
+            }}
+          >
             Series
           </Link>
-          <Link to="streams/episodes" onClick={toggleMenu}>
+          <Link
+            to="streams/episodes"
+            onClick={() => {
+              toggleMenu(), ScrollTop();
+            }}
+          >
             Episodes
           </Link>
-          <Link to="/favourites" onClick={toggleMenu}>
+          <Link
+            to="/favourites"
+            onClick={() => {
+              toggleMenu(), ScrollTop();
+            }}
+          >
             Favourites
           </Link>
-          <Link to="/about" onClick={toggleMenu}>
+          <Link
+            to="/about"
+            onClick={() => {
+              toggleMenu(), ScrollTop();
+            }}
+          >
             About Us
           </Link>
         </div>
