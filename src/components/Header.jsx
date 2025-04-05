@@ -36,7 +36,7 @@ export const Header = () => {
       {/* Nav Bar */}
       <nav className="container mx-auto flex justify-between items-center p-6 ">
         {/* Logo */}
-        <div className="flex items-center justify-center gap-3 text-[1.5rem] sm:text-[1.75rem] font-semibold">
+        <div className="cursor-default flex items-center justify-center gap-3 text-[1.5rem] sm:text-[1.75rem] font-semibold">
           <i className="fa-solid fa-film"></i>
           <h1>movieSCAPE</h1>
         </div>

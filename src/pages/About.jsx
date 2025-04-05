@@ -1,10 +1,8 @@
-import { Link } from "react-router";
-
 export const About = () => {
   return (
-    <section className="p-6 bg-[rgb(0,0,0)] text-[rgb(245,197,24)]">
-      <div className="container mx-auto p-6">
-        <h1 className="bg-[rgb(0,0,0)] z-30 sticky top-[84px] text-2xl my-4 border-b font-medium border-[rgb(245,197,24)] pb-2 text-white flex items-center">
+    <section className="px-6 bg-[rgb(0,0,0)] text-[rgb(245,197,24)]">
+      <div className="container mx-auto px-6">
+        <h1 className="bg-[rgb(0,0,0)] text-2xl z-40 mb-4 sticky top-[84px] border-b font-medium border-[rgb(245,197,24)] pb-2 text-white flex flex-items-center">
           <span className="text-[rgb(245,197,24)] font-bold">| &nbsp;</span>
           About Us
           <span className="text-3xl">&nbsp; &gt;</span>

@@ -30,9 +30,9 @@ export const StreamCard = ({ image, title, description }) => {
         </h1>
         <p className="capitalize text-justify mt-2">{description}</p>
       </div>
-      <span className="border rounded-full px-4 py-1 text-lg font-medium">
+      <button className="border rounded-full px-6 py-1 cursor-pointer font-medium hover:bg-[rgb(245,197,24)] hover:text-black ">
         Explore
-      </span>
+      </button>
     </div>
   );
 };

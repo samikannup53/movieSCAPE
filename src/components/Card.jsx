@@ -1,15 +1,22 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import BackupImage from "../assets/BackupImage.jpg";
 import { FavouritesContext } from "../context/FavouritesContext";
+import { ScrollTop } from "../utilities/ScrollTop";
 
 export const Card = ({ movie, page }) => {
   const { favourites, toggleFavourite } = useContext(FavouritesContext);
   const isFavourite = favourites.some((fav) => fav.imdbID === movie.imdbID);
 
+  const navigate = useNavigate();
+
   const { Poster, Title, Year, Type } = movie;
   const image =
     Poster && Poster !== "N/A" && Poster !== "" ? Poster : BackupImage;
+
+  const handleDetailsClick = () => {
+    navigate(`/streams/${movie.imdbID}/`);
+  };
 
   return (
     <div
@@ -23,18 +30,20 @@ export const Card = ({ movie, page }) => {
       />
       <div className="p-3 -mt-4">
         <h3 className="text-2xl font-medium heading-overflow ">{Title}</h3>
-        <p className="">Year : {Year}</p>
-        <p className="mb-3">{Type}</p>
+        <p className="">Year : <span className="text-white">{Year}</span></p>
+        <p className="mb-3 text-[#00C2FF] uppercase font-medium">{Type}</p>
         <div className="flex justify-between items-center">
-          <Link
-            to={`/streams/${movie.imdbID}/`}
-            className="border px-2  rounded-lg"
+          <button
+            onClick={() => {
+              handleDetailsClick(), ScrollTop();
+            }}
+            className="border px-4   rounded-full cursor-pointer hover:bg-[rgb(245,197,24)] hover:text-black"
           >
             Details
-          </Link>
+          </button>
           {page !== "favourites" ? (
             <button
-              className="text-[rgb(245,197,24)]"
+              className="text-[rgb(245,197,24)] cursor-pointer"
               onClick={() => toggleFavourite(movie)}
             >
               {isFavourite ? (
