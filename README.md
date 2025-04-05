@@ -33,6 +33,53 @@ A powerful movie search application built with React, integrated seamlessly with
 🌐 Live URL : https://sami-moviescape.netlify.app/ 
 
 ---
+
+## Folder Structure 🗂️
+
+```bash
+MOVIESCAPE/
+├── node_modules/          # Dependencies
+├── public/                # Public Assets
+│   └── favicon            # Favicon for the application
+├── src/                   # Source File
+│   ├── assets/            # Assets (Images)
+│   ├── components/        # Reusable UI components
+│   │   ├── index.jsx      # Header component
+│   │   ├── Footer.jsx     # Footer component
+│   │   ├── Card.jsx       # Card component
+│   │   ├── StreamCard.jsx # StreamCard component
+│   │   └── Header.jsx     # Entry Point for Components
+│   ├── context/           # React Context for State Management
+│   │   ├── FavouritesContext.jsx # Manages Favourite Movies
+│   │   └── StreamsContext.jsx    # Manages Streaming Data
+│   ├── pages/                    # Page Components
+│   │   ├── index.js              # Entry point for Pages
+│   │   ├── Home.jsx              # Home Page
+│   │   ├── About.jsx             # About Page
+│   │   ├── ErrorPage.jsx         # Error Page
+│   │   ├── Streams.jsx           # Streams Page
+│   │   ├── MovieList.jsx         # Movie List Page
+│   │   ├── MovieDetails.jsx      # Movie Details Page
+│   │   ├── SearchPage.jsx        # Search Results Page
+│   │   └── Favourites.jsx        # Favourites Page
+│   ├── utilities/                # Utility Functions
+│   │   ├── ScrollTop.jsx         # Scroll to Top Component
+│   │   └── StreamsScroll.jsx     # Scrollable Streams Component
+│   ├── App.jsx         # Root Application Component
+│   ├── index.css       # Global Styles
+│   └── main.jsx        # Entry point for Application
+├── index.Html          # Main HTML File
+├── README.md           # Readme File
+├── .env                # Environment Variables
+├── .gitignore          # Files and directories to ignore in Git
+├── package.json        # Project metadata and dependencies
+├── package-lock.json   # Dependency lock file
+├── vite.config.js      # Vite build tool configuration
+└── eslintrc.config.js  # ESLint configuration
+
+```
+
+---
   
 ## Project Configurations ⚙️
 
@@ -102,4 +149,4 @@ See your app come to life! 💻✨
 
 ---
 
-<h3 align= 'center' style="color: fuchsia"><b>👀 Thanks for Exploring My GitHub Repository! 💖</b></h3>
+<h3 align= 'center' style="color: fuchsia"><b>👀 Thanks for Exploring My Repository! 💖</b></h3>
