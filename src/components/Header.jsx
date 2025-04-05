@@ -41,7 +41,7 @@ export const Header = () => {
           <h1>movieSCAPE</h1>
         </div>
         {/* Search & Stream Options Container */}
-        <div className="flex items-center">
+        <div className="flex items-center lg:mr-35">
           {/* Search Option */}
           <form
             onSubmit={handleSubmit}
@@ -188,6 +188,7 @@ export const Header = () => {
           </Link>
         </div>
       </div>
+      {/* Mobile View Search Bar */}
       <div
         className={`h-20 px-2 flex items-center justify-center gap-4 sm:hidden  w-full fixed   right-0 top-0 bg-[rgb(0,0,0)] duration-1000 ${
           isSearchOpen ? "translate-x-0" : "translate-x-full"

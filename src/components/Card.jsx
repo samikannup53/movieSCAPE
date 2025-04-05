@@ -7,7 +7,7 @@ import { ScrollTop } from "../utilities/ScrollTop";
 export const Card = ({ movie, page }) => {
   const { favourites, toggleFavourite } = useContext(FavouritesContext);
   const isFavourite = favourites.some((fav) => fav.imdbID === movie.imdbID);
-
+  
   const navigate = useNavigate();
 
   const { Poster, Title, Year, Type } = movie;

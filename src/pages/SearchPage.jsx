@@ -117,10 +117,10 @@ export const SearchPage = (stream) => {
             )}
           </div>
         )}
-        {error && <p className="text-red-500">{error}</p>}{" "}
+        {error && <p className="text-red-500">{error}</p>}
         {!isLoading && search.length === 0 && !error && (
           <p>No movies found for "{queryTerm}".</p>
-        )}{" "}
+        )}
         <div className="flex flex-wrap justify-center items-start gap-8">
           {search.map((movie) => (
             <Card key={movie.imdbID} movie={movie} page="search" />

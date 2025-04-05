@@ -7,7 +7,6 @@ export const About = () => {
           About Us
           <span className="text-3xl">&nbsp; &gt;</span>
         </h1>
-
         <div className="sm:w-[75vw] max-w-[1000px] mx-auto my-10 flex flex-col gap-8 px-8 sm:px-15 py-12 border rounded-xl items-center">
           <div>
             <h1 className="bg-[rgb(0,0,0)] sticky top-[85px] text-xl  font-medium  text-white flex items-center">

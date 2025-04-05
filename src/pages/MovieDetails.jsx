@@ -69,6 +69,7 @@ export const MovieDetails = () => {
             />
           </div>
         )}
+
         {error && (
           <div className="text-center text-2xl text-red-500">
             Error: {error}
@@ -101,44 +102,44 @@ export const MovieDetails = () => {
                   <p className="text-white">
                     <span className="font-medium text-[rgb(245,197,24)] ">
                       GENRES
-                    </span>{" "}
-                    : &nbsp;{movie.Genre}{" "}
+                    </span>
+                    : &nbsp;{movie.Genre}
                   </p>
                   <p className="text-white">
                     <span className="font-medium text-[rgb(245,197,24)] ">
                       TYPE
-                    </span>{" "}
-                    : &nbsp;{movie.Type}{" "}
+                    </span>
+                    : &nbsp;{movie.Type}
                   </p>
                   <p className="text-white">
                     <span className="font-medium text-[rgb(245,197,24)] ">
                       ACTORS
-                    </span>{" "}
-                    : &nbsp;{movie.Actors}{" "}
+                    </span>
+                    : &nbsp;{movie.Actors}
                   </p>
                   <p className="text-white">
                     <span className="font-medium text-[rgb(245,197,24)] ">
                       DIRECTOR
-                    </span>{" "}
-                    : &nbsp;{movie.Director}{" "}
+                    </span>
+                    : &nbsp;{movie.Director}
                   </p>
                   <p className="text-white">
                     <span className="font-medium text-[rgb(245,197,24)] ">
                       WRITER
-                    </span>{" "}
-                    : &nbsp;{movie.Writer}{" "}
+                    </span>
+                    : &nbsp;{movie.Writer}
                   </p>
                   <p className="text-white">
                     <span className="font-medium text-[rgb(245,197,24)] ">
                       AWARDS
-                    </span>{" "}
-                    : &nbsp;{movie.Awards}{" "}
+                    </span>
+                    : &nbsp;{movie.Awards}
                   </p>
                   <p className="text-white">
                     <span className="font-medium text-[rgb(245,197,24)] ">
                       YEAR
-                    </span>{" "}
-                    : &nbsp;{Year}{" "}
+                    </span>
+                    : &nbsp;{Year}
                   </p>
                   <p className="mb-4">
                     <span className="font-medium text-[rgb(245,197,24)] ">

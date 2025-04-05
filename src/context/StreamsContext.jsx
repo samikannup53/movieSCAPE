@@ -3,10 +3,8 @@ import MovieImage from "../assets/MovieImage.png";
 import SeriesImage from "../assets/SeriesImage.png";
 import EpisodeImage from "../assets/EpisodeImage.png";
 
-// Create a context for Streams
 const StreamsContext = createContext();
 
-// Provider component to wrap the parts of the app that need access to stream data
 export const StreamsProvider = ({ children }) => {
   const streams = [
     {
@@ -36,7 +34,6 @@ export const StreamsProvider = ({ children }) => {
   );
 };
 
-// Custom hook to access streams data
 export const useStreams = () => {
   return useContext(StreamsContext);
 };
