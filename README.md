@@ -15,7 +15,7 @@ A powerful movie search application built with React, integrated seamlessly with
 🎞️ **Detailed Movie View** : Dive into Movie Details such as Movie Posters, Release Year, Genre, Plot, Ratings, and Cast.  <br/> 
 🔧 **Advanced Filtering** : Filter Movies by Type Using API Endpoints (No array Filters).  <br/> 
 ❤️ **Add & Manage Favorites** : Save and Manage Favorite Movies Easily.  <br/> 
-🗺️ **Seamless Navigation** : Enjoy Smooth Transitions with React Router between Search, Movie Detail & Favourite Movie List Pages.  <br/> 
+🗺️ **Navigation** : Enjoy Smooth Transitions with React Router between Search, Movie Detail & Favourite List Pages.  <br/> 
 🚨 **Error Handling** : Displays User-Friendly Messages for API Errors and No-Results Scenarios.
 
 ---
